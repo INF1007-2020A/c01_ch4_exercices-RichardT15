@@ -14,11 +14,11 @@ def replace_char(string: str, old_char: str, new_char: str) -> str:
 
 
 def get_nb_char(string: str, char: str) -> int:
-    return string.count("l")
+    return string.count(char)
 
 
 def get_nb_words(sentence: str) -> int:
-    return 0
+    return len(sentence.split(" "))
 
 
 def main() -> None:
@@ -32,6 +32,7 @@ def main() -> None:
     string = "hello world!"
     print(f"On remplace le caratère w par le caractère z dans la chaine: '{string}'. Résultat: {replace_char(string, 'w', 'z')}")
 
+    string = "hello"
     print(f"Le nombre d'occurrence de l dans hello est : {get_nb_char(string, 'l')}")
     
     string = "Baby shark doo doo doo doo doo doo"
